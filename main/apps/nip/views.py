@@ -8,4 +8,7 @@ def process(request):
     pass
 
 def strength(request):
-    return render(request, 'nip/strengths.html')
+    context = {
+        'stacks': Stack.objects.all()
+    }
+    return render(request, 'nip/strengths.html', context)

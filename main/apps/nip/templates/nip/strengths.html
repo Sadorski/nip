@@ -51,79 +51,87 @@
         <div class="box">
                 <h3 class="box-header">Web Fundamentals</h3>
                     <div class="strength-icons">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
+                            {% for stack in stacks %}
+                            {% for s in stack.skills.all %}
+                            {% if stack.id == 1 %}
+                            <form action="" method="POST">
+                                    <img src="" alt"">{{s.name}}<input type="checkbox" name="sCheck" value="{{s.id}}">
+                                    </form>
+                            {% endif %}
+                            {% endfor %}
+                            {% endfor %}
+                        
                     </div>
             </div>
             <div class="box">
                 <h3 class="box-header">Python</h3>
                     <div class="strength-icons">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
+                            {% for stack in stacks %}
+                            {% for s in stack.skills.all %}
+                            {% if stack.id == 3 %}
+                            <form action="" method="POST">
+                                    <img src="" alt"">{{s.name}}<input type="checkbox" name="sCheck" value="{{s.id}}">
+                                    </form>
+                            {% endif %}
+                            {% endfor %}
+                            {% endfor %}
+                       
                     </div>
             </div>
             <div class="box">
                 <h3 class="box-header">Ruby on Rails</h3>
                     <div class="strength-icons">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
+                            {% for stack in stacks %}
+                            {% for s in stack.skills.all %}
+                            {% if stack.id == 2 %}
+                            <form action="" method="POST">
+                                    <img src="" alt"">{{s.name}}<input type="checkbox" name="sCheck" value="{{s.id}}">
+                                    </form>
+                            {% endif %}
+                            {% endfor %}
+                            {% endfor %}
                     </div>
              </div>
              <div class="box">
                 <h3 class="box-header">MEAN</h3>
                     <div class="strength-icons">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
+                            {% for stack in stacks %}
+                            {% for s in stack.skills.all %}
+                            {% if stack.id == 6 %}
+                            <form action="" method="POST">
+                                    <img src="" alt"">{{s.name}}<input type="checkbox" name="sCheck" value="{{s.id}}">
+                                    </form>
+                            {% endif %}
+                            {% endfor %}
+                            {% endfor %}
                     </div>
             </div>
             <div class="box">
                 <h3 class="box-header">iOS Applications</h3>
                     <div class="strength-icons">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
+                            {% for stack in stacks %}
+                            {% for s in stack.skills.all %}
+                            {% if stack.id == 4 %}
+                            <form action="" method="POST">
+                                    <img src="" alt"">{{s.name}}<input type="checkbox" name="sCheck" value="{{s.id}}">
+                                    </form>
+                            {% endif %}
+                            {% endfor %}
+                            {% endfor %}
                     </div>
             </div>
             <div class="box">
                 <h3 class="box-header">Algorithms</h3>
                     <div class="strength-icons">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
+                            {% for stack in stacks %}
+                            {% for s in stack.skills.all %}
+                            {% if stack.id == 5 %}
+                            <form action="" method="POST">
+                            <img src="" alt"">{{s.name}}<input type="checkbox" name="sCheck" value="{{s.id}}">
+                            </form>
+                            {% endif %}
+                            {% endfor %}
+                            {% endfor %}
                     </div>
             </div>
             <input type="submit" value="Submit">
