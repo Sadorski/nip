@@ -42,3 +42,8 @@ def strength(request):
     }
     return render(request, 'nip/strengths.html', context)
 
+
+
+
+
+for item in request.POST.getlist['s.check']
