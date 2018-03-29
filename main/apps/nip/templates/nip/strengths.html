@@ -22,8 +22,9 @@
 <body>
     {% for stack in stacks %}
     {% for s in stack.skills.all %}
-    {% if stack.id == 1 %}
-    {{s.name}}
+    {% if stack.id == 5 %}
+
+            {{s.name}}
     {% endif %}
     {% endfor %}
     {% endfor %}
