@@ -1,0 +1,86 @@
+/*CSS reset settings here*/
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.wrapper{
+    background-color: orangered;
+    height: auto;
+    margin: 0px auto;
+    padding: 10px;
+   }
+.header {
+    background-color: mediumvioletred;
+    height: 60px;
+}
+.left-LOGO {
+    display: inline-block;
+    font-size: 50px;
+}
+.right-boxes{
+    display: inline-block;
+    float: right;
+}
+.profile-button, .logout-button {
+    display: inline-block;
+    font-size: 1.3em;
+    margin: 15px;
+}
+.profile-button a, .logout-button a{
+    color: black;
+}
+.fa {
+    padding: 13px;
+    font-size: 30px;
+    width: 18px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+
+  }
+  .fa-github{
+    background: black;
+    color: white; 
+  }
+  .fa-slack{
+    background: black;
+    color: white; 
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  
+ .hobbies {
+    background: url(images/benice.png) center center no-repeat; 
+    border: 1px solid darkred;  
+    overflow: hidden; 
+    word-wrap: break-word; 
+    resize: none; 
+    height: 75px;
+    width: 174px;
+  }
+  
