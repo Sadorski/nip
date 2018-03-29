@@ -7,8 +7,3 @@ def index(request):
 def process(request):
     pass
 
-def strength(request):
-    context = {
-        'stacks': Stack.objects.all()
-    }
-    return render(request, 'nip/strengths.html', context)
