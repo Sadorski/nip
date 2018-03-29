@@ -1,3 +1,20 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Marketplace
+Explore
+ @SamRabling
+Sign out
+0
+0 3 Sadorski/nip
+ Code  Issues 0  Pull requests 2  Projects 0  Wiki  Insights
+nip/main/apps/nip/views.py
+119494b  23 minutes ago
+ Sultan Sultani tejas changes
+     
+45 lines (37 sloc)  1.42 KB
 from django.shortcuts import render, HttpResponse, redirect
 from models import *
   # the index function is called when root is visited
@@ -41,9 +58,3 @@ def strength(request):
         'stacks': Stack.objects.all()
     }
     return render(request, 'nip/strengths.html', context)
-
-
-
-
-
-for item in request.POST.getlist['s.check']
