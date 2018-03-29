@@ -19,6 +19,13 @@
     <title>Strengths: NIP</title>
 </head>
 <body>
+    {% for stack in stacks %}
+    {% for s in stack.skills.all %}
+    {% if stack.id == 1 %}
+    {{s.name}}
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
     <div class="wrapper">
         <div class="header">
             <div class="left-LOGO">
