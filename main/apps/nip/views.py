@@ -58,9 +58,3 @@ def strength(request):
         'stacks': Stack.objects.all()
     }
     return render(request, 'nip/strengths.html', context)
-
-def user_result(request):
-    return render(request, 'nip/user_search.html')
-
-def help_result(request):
-    return render(request, 'nip/help_search.html')
