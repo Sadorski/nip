@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NIP</title>
+</head>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+
+</script>
+<style>
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .choose{
+        /* border:1px solid black; */
+        width: 180px;
+        height: 90px;
+        /* padding:10px; */
+        display:inline-block;
+        vertical-align: top;
+        /* border-radius:20px; */
+        text-align:center;
+        margin-left:110px;
+
+    }
+    .header{
+        height:50px;
+    }
+    .welcome{
+        width:650px;
+    }
+    h1, h2{
+        display: inline-block;
+    }
+    h1{
+        margin-right: 500px;
+    }
+    /* h2{
+       margin-right: 20px; 
+    } */
+
+    h3{
+        text-align:center;
+    }
+
+    h4{
+        margin:15px;    
+    }
+    .top{
+        height:30px;
+        border-bottom:1px solid black; 
+    }
+</style>
+<body>
+    <div class="header">
+        <h1>NIP</h1>
+        <h2>Profile</h2>
+        <h2>Logout</h2>
+    </div>
+    <div class="welcome">
+        <h3> Welcome, {{user.first_name}}</h3>
+        <h3 class="question">One Simple Question: What do you need?</h3>
+    </div>
+    <div class="choose">
+        <h2 class="top">To Find Someone</h2>
+        <h2>Who do you want to find?</h2>
+    </div>
+    <div class="choose">
+        <h2 class="top">To Get Help</h2>
+        <h2>What do you need help with?</h2>
+    </div>
+    
+</body>
+</html>
