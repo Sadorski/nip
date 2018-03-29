@@ -74,6 +74,7 @@ def socials_process(request):
 	user.slack = slack
 	user.instagram = instagram
 	user.twitter = twitter
+	user.save()
  	return redirect('/socials')
 
 
