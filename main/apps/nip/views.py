@@ -57,4 +57,8 @@ def strength(request):
     context = {
         'stacks': Stack.objects.all()
     }
+<<<<<<< HEAD
     return render(request, 'nip/strengths.html', context)
+=======
+    return render(request, 'nip/strengths.html', context)
+>>>>>>> 058c6177ec215e0255e4a416f3fa1b6b7a5ca315
