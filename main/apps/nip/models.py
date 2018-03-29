@@ -47,18 +47,27 @@ class User(models.Model):
    github = models.TextField(default = 'na')
    instagram = models.TextField(default = 'na')
    slack = models.TextField(default = 'na')
+   def __repr__(self):
+       return "<User object: {} {}, {}, {}, {} | {} | {} | {} | {}>".format(self.first_name, self.last_name, self.email,self.status, self.facebook, self.linkedin, self.github, self.instagram, self.slack)
+
+
+class Stack(models.Model):
+   student = models.ForeignKey(User,related_name = "current_stack", null=True)
+   name = models.CharField(max_length= 40)
+   created_at = models.DateTimeField(auto_now_add = True)
+   updated_at = models.DateTimeField(auto_now = True)
+   def __repr__(self):
+       return "<Stack object: {}, {}>".format(self.student, self.name)
+
 
 class Skill(models.Model):
    name = models.CharField(max_length= 40)
-   desc = models.TextField()
    created_at = models.DateTimeField(auto_now_add = True)
    updated_at = models.DateTimeField(auto_now = True)
-   user = models.ManyToManyField(User, related_name="strengths")
+   language = models.ForeignKey(Stack, related_name='skills')
+   user = models.ManyToManyField(User, related_name="strengths", null=True)
+   def __repr__(self):
+       return "<Skill object: {} {}, {}>".format(self.name, self.language, self.user)
 
-class Stack(models.Model):
-   student = models.ForeignKey(User,related_name = "current_stack")
-   name = models.CharField(max_length= 40)
-   skill = models.ForeignKey(Skill, related_name="language")
-   created_at = models.DateTimeField(auto_now_add = True)
-   updated_at = models.DateTimeField(auto_now = True)
+
 
