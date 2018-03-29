@@ -63,13 +63,12 @@
         vertical-align: top;
     }
     .search_result{
-        padding-bottom:10px;
         display: inline-block;
-        text-align:center;
-        font-size: 30px;
-        height:90px;
-        font-size:40px;
-        /* width:400px; */
+		text-align: center;
+		vertical-align: middle;
+		line-height: 90px;
+		position: absolute;
+		margin-left:20px;
 
     }
 
@@ -84,13 +83,12 @@
         <h2 class="logout">Logout</h2>
     </div>
     <div class="main_content">
-        <p class="search_results">Search Results: Find Someone</p>
+        <h3>Search Results: Find Someone</h3>
 
         <!-- JUST FOR SHOW -->
-        <div class="search_result"></div>
+        <div class="results"></div>
         <img class="profile_pic" src="https://www.shareicon.net/data/128x128/2016/07/10/119669_people_512x512.png" alt="profile_pic">
-        
-            <p ><a class="user_name" href="user.profile">Sample Sampleton</a></p>
+            <p class="search_result"> <a href="user.profile">Sample Sampleton</a>
             <button type="submit" class="email" name="email">Email</button>
         </div>
         {% for profile in results %}
