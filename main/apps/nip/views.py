@@ -12,3 +12,6 @@ def strength(request):
 
 def user_result(request):
     return render(request, 'nip/user_search.html')
+
+def help_result(request):
+    return render(request, 'nip/help_search.html')
