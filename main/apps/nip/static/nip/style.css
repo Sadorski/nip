@@ -13,6 +13,7 @@
 .header {
     background-color: mediumvioletred;
     height: 60px;
+    border-bottom: 1px solid black;
 }
 .left-LOGO {
     display: inline-block;
