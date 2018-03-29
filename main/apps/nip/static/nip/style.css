@@ -83,4 +83,30 @@
     height: 75px;
     width: 174px;
   }
+
+  .box {
+      width: 31%
+    display: inline-block;
+    vertical-align: top;
+    height: auto;
+    width: 30%;
+    margin-left: 12px;
+    margin-right: 12px;
+    /* background-color: orangered; */
+    border: 2px solid silver;
+}
+.box-header {
+    text-align: center;
+    color: white;
+    height: 30px;
+    width: auto;
+    background-color: rgb(56, 60, 71);
+    margin-bottom: 10px;
+    padding: 9px 0 0 7px;
+}
+.strength-icons img{
+    background-color: black;
+    height: 50px;
+    width: 50px;
+}
   
