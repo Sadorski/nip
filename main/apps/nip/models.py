@@ -37,6 +37,7 @@ class RegistrationManager(models.Manager):
 class User(models.Model):
    first_name = models.CharField(max_length= 40)
    last_name = models.CharField(max_length= 40)
+   image = models.BinaryField(blank=True)
    email = models.CharField(max_length = 55)
    status = models.CharField(max_length = 20)
    password = models.CharField(max_length = 255)
