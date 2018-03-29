@@ -5,20 +5,20 @@
     <title>NIP</title>
 </head>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-
+    $('#who').click(function () {
+        $('.site_search_who').toggle("slow"); 
+    });
 </script>
 <style>
     *{
         font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
     }
     .choose{
-        /* border:1px solid black; */
-        width: 180px;
+        /* width: 180px; */
         height: 90px;
-        /* padding:10px; */
         display:inline-block;
         vertical-align: top;
-        /* border-radius:20px; */
         text-align:center;
         margin-left:110px;
 
@@ -26,29 +26,47 @@
     .header{
         height:50px;
     }
-    .welcome{
-        width:650px;
-    }
+
     h1, h2{
         display: inline-block;
     }
     h1{
-        margin-right: 500px;
-    }
-    /* h2{
-       margin-right: 20px; 
-    } */
-
-    h3{
-        text-align:center;
+        margin-right: 600px;
     }
 
     h4{
         margin:15px;    
     }
-    .top{
-        height:30px;
-        border-bottom:1px solid black; 
+
+    .search_bar{
+        width: 400px;
+        height: 100px;
+        border-radius:20px;   
+    }
+
+    #who, #what{
+        border: transparent;
+        display: inline-block;
+        padding: 10px;
+        font-size: 30px;
+        margin: 100px;
+    }
+
+   .submit{
+        display:block;
+        margin-left:450px;
+        margin-top: 20px;
+        padding: 10px;
+        border-radius:10px;
+        font-size: 30px;
+    }
+    .site_search_who {
+        margin-left: 150px;
+        visibility: hidden;
+    }
+    .site_search_what{
+        margin-left: 150px;
+        visibility: hidden;
     }
 </style>
 <body>
@@ -61,14 +79,27 @@
         <h3> Welcome, {{user.first_name}}</h3>
         <h3 class="question">One Simple Question: What do you need?</h3>
     </div>
-    <div class="choose">
-        <h2 class="top">To Find Someone</h2>
-        <h2>Who do you want to find?</h2>
-    </div>
-    <div class="choose">
-        <h2 class="top">To Get Help</h2>
-        <h2>What do you need help with?</h2>
-    </div>
+ 
+        <button id="who">To Find Someone</button>
+
+        <button id="what">To Get Help</button>
     
+    <div class = "site_search_who">
+        <h2>Who do you want to find?</h2>
+        <form>
+            <input type="search" name="tutor_search" class="search_bar" size="100">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div class = "site_search_what">
+        <h2>What do you need help with?</h2>
+        <form>
+            <input type="search" name="skill_search" class="search_bar" size="100">
+            <button id="what" type="submit">Submit</button>
+        </form>
+    </div>
+   
+
 </body>
 </html>
