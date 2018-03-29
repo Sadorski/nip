@@ -9,3 +9,6 @@ def process(request):
 
 def strength(request):
     return render(request, 'nip/strengths.html')
+
+def user_result(request):
+    return render(request, 'nip/user_search.html')

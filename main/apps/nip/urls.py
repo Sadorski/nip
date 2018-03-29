@@ -3,5 +3,6 @@ from . import views           # This line is new!
 urlpatterns = [
     url(r'^$', views.index),
     url(r'^process/?$', views.process),
-    url(r'^strengths/?$', views.strength)      # This line has changed!
+    url(r'^strengths/?$', views.strength),      # This line has changed!
+    url(r'^user_search_results/?$', views.user_result), #this is the search results !
 ]
