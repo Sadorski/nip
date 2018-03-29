@@ -42,11 +42,11 @@ class User(models.Model):
    password = models.CharField(max_length = 255)
    created_at = models.DateTimeField(auto_now_add = True)
    updated_at = models.DateTimeField(auto_now = True)
-   facebook = models.TextField(default = 'na')
-   linkedin = models.TextField(default = 'na')
-   github = models.TextField(default = 'na')
-   instagram = models.TextField(default = 'na')
-   slack = models.TextField(default = 'na')
+   facebook = models.TextField(null=True)
+   linkedin = models.TextField(null=True)
+   github = models.TextField(null=True)
+   instagram = models.TextField(null=True)
+   slack = models.TextField(null=True)
    def __repr__(self):
        return "<User object: {} {}, {}, {}, {} | {} | {} | {} | {}>".format(self.first_name, self.last_name, self.email,self.status, self.facebook, self.linkedin, self.github, self.instagram, self.slack)
 
