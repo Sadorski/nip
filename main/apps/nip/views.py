@@ -6,3 +6,6 @@ def index(request):
 
 def process(request):
     pass
+
+def strength(request):
+    return render(request, 'nip/strengths.html')
