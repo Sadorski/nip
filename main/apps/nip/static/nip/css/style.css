@@ -6,8 +6,8 @@
 }
 .wrapper{
     width: 1300px;
-    background-color: rgb(128, 126, 126);
-    height: 1000px;
+    /* background-color: rgb(128, 126, 126);
+    height: 1000px; */
     margin: 0px auto;
     padding: 10px;
    }
@@ -74,7 +74,7 @@
 
  /* Button CSS: */
 
- 
+
  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
 
 /* General Buttons */
@@ -252,7 +252,7 @@ h1 {
   }
 
   .box {
-      width: 31%
+      
     display: inline-block;
     vertical-align: top;
     height: auto;

@@ -14,20 +14,11 @@
     <script>
         $( document ).ready(function() {
             console.log( "ready!" );
-
             });
     </script>
     <title>Strengths: NIP</title>
 </head>
 <body>
-    {% for stack in stacks %}
-    {% for s in stack.skills.all %}
-    {% if stack.id == 5 %}
-
-            {{s.name}}
-    {% endif %}
-    {% endfor %}
-    {% endfor %}
     <div class="wrapper">
         <div class="header">
             <div class="left-LOGO">
@@ -46,95 +37,111 @@
             <p>What is your availability?</p>
             <form action="#" method="POST">
                 Dates:<input type="date" class="date">
-                <input type="radio" class="radioButton" name="morning">
+                <input type="checkbox" class="radioButton" name="morning">
                     Mornings
-                    <input type="radio" class="radioButton" name="afternoon">
+                    <input type="checkbox" class="radioButton" name="afternoon">
                     Afternoons
-                    <input type="radio" class="radioButton" name="night">
+                    <input type="checkbox" class="radioButton" name="night">
                     Nights
-                    <input type="radio" class="radioButton" name="weekend">
+                    <input type="checkbox" class="radioButton" name="weekend">
                     Weekends
             </form>
         </div>
         <div class="box">
+                <form action="/process" method="POST">
+                        {% csrf_token %}
                 <h3 class="box-header">Web Fundamentals</h3>
                     <div class="strength-icons">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
+                            {% for stack in stacks %}
+                            {% for s in stack.skills.all %}
+                            {% if stack.id == 1 %}
+                                    
+                                    <img src="../../static/nip/img/{{s.id}}.png" alt="{{s.name}}"/>{{s.name}}{{s.id}}<input type="checkbox" name="sCheck" value="{{s.id}}">
+        
+                            {% endif %}
+                            {% endfor %}
+                            {% endfor %}
+                        
                     </div>
             </div>
             <div class="box">
                 <h3 class="box-header">Python</h3>
                     <div class="strength-icons">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
+                            {% for stack in stacks %}
+                            {% for s in stack.skills.all %}
+                            {% if stack.id == 3 %}
+                           
+                                    <img src="../../static/nip/img/{{s.id}}.png" alt="{{s.name}}"/>{{s.name}}{{s.id}}<input type="checkbox" name="sCheck" value="{{s.id}}">
+
+                                    
+                            {% endif %}
+                            {% endfor %}
+                            {% endfor %}
+                       
                     </div>
             </div>
             <div class="box">
                 <h3 class="box-header">Ruby on Rails</h3>
                     <div class="strength-icons">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
+                            {% for stack in stacks %}
+                            {% for s in stack.skills.all %}
+                            {% if stack.id == 2 %}
+                       
+                                    <img src="" alt"">{{s.name}}<input type="checkbox" name="sCheck" value="{{s.id}}">
+                             
+                            {% endif %}
+                            {% endfor %}
+                            {% endfor %}
                     </div>
              </div>
              <div class="box">
                 <h3 class="box-header">MEAN</h3>
                     <div class="strength-icons">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
+                            {% for stack in stacks %}
+                            {% for s in stack.skills.all %}
+                            {% if stack.id == 6 %}
+                           
+                                    <img src="" alt"">{{s.name}}<input type="checkbox" name="sCheck" value="{{s.id}}">
+                                    
+                            {% endif %}
+                            {% endfor %}
+                            {% endfor %}
                     </div>
             </div>
             <div class="box">
                 <h3 class="box-header">iOS Applications</h3>
                     <div class="strength-icons">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
+                            {% for stack in stacks %}
+                            {% for s in stack.skills.all %}
+                            {% if stack.id == 4 %}
+                          
+                                    <img src="" alt"">{{s.name}}<input type="checkbox" name="sCheck" value="{{s.id}}">
+                                    
+                            {% endif %}
+                            {% endfor %}
+                            {% endfor %}
                     </div>
             </div>
             <div class="box">
                 <h3 class="box-header">Algorithms</h3>
                     <div class="strength-icons">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
-                        <img src="" alt"">
+                            {% for stack in stacks %}
+                            {% for s in stack.skills.all %}
+                            {% if stack.id == 5 %}
+                            
+                            <img src="" alt"">{{s.name}}<input type="checkbox" name="sCheck" value="{{s.id}}">
+                            
+                            {% endif %}
+                            {% endfor %}
+                            {% endfor %}
                     </div>
             </div>
             <input type="submit" value="Submit">
+        </div>
+        </form>
     </div> 
 </body>
 </html>   
+
+
+

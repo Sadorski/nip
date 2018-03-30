@@ -7,24 +7,7 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'nip/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
     <link rel="stylesheet" href="../../static/nip/css/style.css">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script>
-            function fileUpload() {
-                var x = document.getElementById("userFile");
-            }
-        $( document ).ready(function() {
-            console.log( "ready!" );
-
-
-            $("hobbies")
-                .focus(function() { $(this).css("background", "none") })
-                .blur(function() { if ($(this)[0].value == '') { $(this).css("background", "url(images/benice.png) center center no-repeat") 
-                } });
-            });
-    </script>
     <title>Registration: NIP</title>
 </head>
 <body>
@@ -44,50 +27,35 @@
         </div>
         <div class="main-content">
             <h2>Just a few quick questions...</h2>
-            <div class="question-1">
-                <p>Are you an Instructor or a Student?</p>
-                <form action="#" method="POST">
-                    <input type="radio" class="radioButton" name="instructor">
+            {% if messages %}
+            {% for message in messages %}
+                <p>{{message}}</p>
+            {%endfor%}
+            {%endif%}
+            <form method="post" action="/socials_process">
+                {% csrf_token %}
+                Who are you?
+                <input type="radio" class="radioButton" name="type">
                     Instructor
-                    <input type="radio" class="radioButton" name="student">
+                <input type="radio" class="radioButton" name="type">
                     Student
-                </form>
-            </div>
-            <div class="question-2">
-                <p>Upload a profile pic!</p>
-                <input type="file" id="userFile">
-            </div>
-            <div class="question-3">
-                <p>Have any social media profiles?</p>
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-instagram"></a>
-                <a href="#" class="fa fa-linkedin"></a>
-                <a href="#" class="fa fa-github"></a>
-                <a href="#" class="fa fa-slack"></a>
-            </div>
-            <div class="question-4">
-                <p>Any hobbies or interests?</p>
-                <form id="paper" method="get" action="">
-                    <textarea placeholder="HOBBIES!" class="hobbies" name="text" rows="4"></textarea>  
-                    <br>
-                     <input id="button" type="submit" value="Create">
-                </form>
-            </div>
-            <div class="question-5">
-                <p>Do you want to teach other students?</p>
-                <form action="#" method="POST">
-                    <input type="radio" class="radioButton" name="yes">
+                <br>
+                What are your socials? (paste links to profiles)
+                LinkedIn <input type="text" name="linkedin">
+                Facebook <input type="text" name="facebook">
+                GitHub <input type="text" name="github">
+                Slack <input type="text" name="slack">
+                Instagram <input type="text" name="instagram">
+                Twitter <input type="text" name="twitter">
+                <br>
+                Would you be willing and available to help other students?
+                <input type="radio" class="radioButton" name="help" value="yes">
                     Yes
-                    <input type="radio" class="radioButton" name="no">
-                    No
-                </form>
-            </div>
-        </div>
-        <div class="bottom-submit">
-            <p>Awesome! Time to fill out strengths!</p>
-            <input type="submit" value="Let's Go!">
-        </div>
+               <input type="radio" class="radioButton" name="help" value="no">
+                No
+                <br>
+                <input type="submit" name="submit" value="Click here to move on">
+            </form>
     </div>
 </body>
 </html>
